@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./common.css";
 
 export default function Footer() {
