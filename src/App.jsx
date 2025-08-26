@@ -1,62 +1,38 @@
-import { useMemo } from "react";
+// src/App.jsx
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import "./components/common.css";
-import "./components/reset.css"; 
-import "./index.css"; 
+import "./components/reset.css";
+import "./index.css";
 import Header from "./components/Header";
-import MenuSection from "./components/MenuSection.jsx";
-import FriendItem from "./components/FriendItem";
 import Footer from "./components/Footer";
-import { sections, myProfile, friends } from "./data/friends";
+
+// 페이지들
+import Home from "./pages/Home.jsx";
+import ChatList from "./pages/ChatList.jsx";
+import ChatRoom from "./pages/ChatRoom.jsx";
+
+function useHeaderTitle() {
+  const { pathname } = useLocation();
+  if (pathname.startsWith("/chat/")) return "채팅방";
+  if (pathname.startsWith("/chats")) return "채팅";
+  return "친구";
+}
 
 export default function App() {
-  // 필요 시 메모이제이션
-  const friendCount = useMemo(() => friends.length, [friends]);
+  const title = useHeaderTitle();
 
   return (
     <div id="container">
       {/* 상단영역 */}
-      <Header title="친구" />
+      <Header title={title} />
 
-      {/* 내용영역 */}
-      <div id="body">
-        <ul>
-          {/* 내 프로필 */}
-          <li className="body_profile">
-            <a href="#" className="profile_picture" onClick={(e)=>e.preventDefault()}>
-              <img src="/img/pompom_purin.jpg" alt="프로필" />
-            </a>
-            <a href="#" className="profile_explain" onClick={(e)=>e.preventDefault()}>
-              <span className="id_name">{myProfile.name}</span>
-              <span className="id_message">{myProfile.message}</span>
-            </a>
-          </li>
-
-          {/* 메뉴 섹션(아코디언) */}
-          {sections.map((sec) => (
-            <MenuSection
-              key={sec.key}
-              title={sec.title}
-              iconSrc={sec.iconSrc}
-              description={sec.description}
-              items={sec.items}
-            />
-          ))}
-
-          {/* 친구 목록 헤더 */}
-          <a href="#" className="friends_collection" onClick={(e)=>e.preventDefault()}>
-            <span>친구</span>
-            <span>{friendCount}</span>
-            <span className="b_menu_icon">페이지 열기 화살표</span>
-          </a>
-
-          {/* 친구 목록 */}
-          {friends.map((f) => (
-            <li className="body_f_profile" key={f.id}>
-              <FriendItem {...f} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* 내용영역: 라우팅으로 분리 */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/chats" element={<ChatList />} />
+        <Route path="/chat/:chatId" element={<ChatRoom />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
 
       {/* 하단(공통) */}
       <Footer />
