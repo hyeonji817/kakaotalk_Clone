@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+#body {
+    width: auto;
+    min-height: 20px;
+    padding-top: 45px;
+}
+
+#body .body_profile {display: block;
+width: auto;
+margin: 10px;
+margin-bottom: 5px;
+min-height: 50px;
+border-bottom: 1px solid #b9b9b9;
+padding-bottom: 10px;
+}
+
+#body .body_profile:active {
+    background-color: #f9f9f9;
+}
+
+#body .body_profile .profile_picture {
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+#body .body_profile .profile_picture img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#body .profile_explain {
+    display: block;
+    float: left;
+}
+
+#body .id_name {
+    /** 카톡 상단의 본인 프로필 사진 */
+    display: block;
+    width: auto;
+    margin: 10px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+#body .id_content {
+    /** 카톡 상단의 본인 프로필 사진 */
+    display: inline;
+    width: auto;
+    font-size: 13px;
+    position: relative;
+    bottom: 25px;
+
+}
+
+
+#body .id_message {
+    /** 카톡 상단의 본인 상태메시지 */
+    display: block;
+    width: auto;
+    margin: 0 0 5px 10px;
+    font-size: 10px;
+    color: #b9b9b9;
+}
+
+#body ul {
+    display: block;
+    width: auto;
+    min-height: 100px;
+    float: left;
+    padding-bottom: 55px;
+}
+
+#body .body_menulist {
+    display: block;
+    float: left;
+    width: 330px;
+    border-bottom: 0.5px solid #b9b9b9;
+    padding-bottom: 3px;
+    margin: 8px;
+    color: #b9b9b9;
+    font-size: 12px;
+}
+
+#body .body_menulist .b_menu_listname {
+    display: inline-block;
+    float: left;
+}
+
+#body .body_menulist .b_menu_icon {
+    display: inline-block;
+    position: relative;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background-image: url('/img/icon.png');
+    background-position: -114px -75px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#body .body_menulist .channel-icon {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+#body .body_menulist .channel-icon .id_name {
+    float: right;
+    display: inline-block;
+}
+
+#body .body_menulist .id_name {
+    display: inline-block;
+    width: auto;
+    color: #000;
+    margin-top: 20px;
+    position: relative;
+    bottom: 5px;
+}
+
+#body .friends_collection .b_menu_icon {
+    display: inline-block;
+    float: right;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background-image: url('/img/icon.png');
+    background-position: -138px -75px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    position: relative;
+    top: 10px;
+    right: 11px;
+
+}
+
+#body .friends_collection span {
+    display: inline-block;
+    float: left;
+    color: #b9b9b9;
+    font-size: 12px;
+    margin: 10px 5px 10px 10px;
+
+}
+
+#body .friends_collection span:last-child {
+    margin-left: 0;
+}
+
+#body .friends_list .b_menu_icon {
+    display: inline-block;
+    float: right;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background-image: url('/img/icon.png');
+    background-position: -138px -75px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    position: relative;
+    top: 10px;
+    right: 11px;
+}
+
+#body .body_f_profile {
+    display: block;
+    width: 330px;
+    margin: 0 10px 0 10px;
+    min-height: 55px;
+    float: left;
+}
+
+
+
+
+
+#body .body_f_profile:active {
+    background-color: #f9f9f9;
+}
+
+#body .profile_f_picture {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
+    border-radius: 15px;
+    border: 0.5px solid #b9b9b9;
+    overflow: hidden;
+}
+
+
+
+#body .profile_f_picture img {
+    display: block;
+    width: 105%;
+
+}
+
+#body .profile_f_detail_2 {
+    display: inline-block;
+    width: auto;
+    color: #000;
+    position: relative;
+}
+
+#body .profile_f_detail_1 {
+    display: inline-block;
+    width: auto;
+    color: #000;
+    position: relative;
+    bottom: 5px;
+}
+
+.content {
+    display: block;
+    margin-top: 3px;
+    height: 44px;
+}
+
+.kakaoicon {
+    zoom: 0.8;
+    margin-bottom: 4px;
+}
+
+.b_menu_listname {}

@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+* {
+    font-family: "맑은고딕", "굴림", "Helvetica";
+    font-size: 13px;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#container {
+    width: 350px;
+}
+
+#header {
+    width: 330px;
+    min-height: 20px;
+    padding: 20px 10px 0 10px;
+    position: fixed;
+    background-color: #fff;
+    z-index: 100;
+}
+
+#header .header_title {
+    display: inline-block;
+    float: left;
+    font-size: 23px;
+    padding-left: 5px;
+}
+
+#header .header_iconlist {
+    display: inline-block;
+    float: right;
+    width: 145px;
+}
+
+#header .header_iconlist a {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    margin-left: 7px;
+}
+
+#header .header_iconlist .search {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    background-image: url('/img/icon.png');
+    background-position: -13px -15px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#header .header_iconlist .plus_friend {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    background-image: url('/img/icon.png');
+    background-position: -52px -14px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#header .header_iconlist .music {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('/img/icon.png');
+    background-position: -92px -14px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#header .header_iconlist .setup {
+    display: inline-block;
+    width: 25px;
+    height: 30px;
+    background-image: url('/img/icon.png');
+    background-position: -132px -10px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#header .header_iconlist .add_chat {
+    display: inline-block;
+    width: 22px;
+    height: 29px;
+    background-image: url('/img/icon.png');
+    background-position: -52px -50px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#header li:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+#footer {
+    width: 350px;
+    min-height: 60px;
+    margin: auto;
+    background-color: #f9f9f9;
+    position: fixed;
+    bottom: 0;
+}
+
+#footer ul {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+#footer ul li {
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+}
+
+#footer ul a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 15px;
+    margin-left: 37px;
+}
+
+#footer ul .ft_f_list {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('/img/icon.png');
+    background-position: -13px -48px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#footer ul .ft_f_list_1 {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('/img/icon.png');
+    background-position: -35px -64px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#footer ul .ft_c_list {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('/img/icon.png');
+    background-position: -53px -50px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#footer ul .ft_c_list_1 {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('/img/icon.png');
+    background-position: -75px -66px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#footer ul .ft_page {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('/img/icon.png');
+    background-position: -94px -50px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+}
+
+#footer ul .ft_more {
+    display: inline-block;
+    width: 25px;
+    height: 21px;
+    background-image: url('/img/icon.png');
+    background-position: -129px -55px;
+    background-size: 165px 86px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    position: absolute;
+    top: 22px;
+}
