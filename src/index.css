@@ -6,13 +6,14 @@
     padding-top: 45px;
 }
 
-#body .body_profile {display: block;
-width: auto;
-margin: 10px;
-margin-bottom: 5px;
-min-height: 50px;
-border-bottom: 1px solid #b9b9b9;
-padding-bottom: 10px;
+#body .body_profile {
+    display: block;
+    width: auto;
+    margin: 10px;
+    margin-bottom: 5px;
+    min-height: 50px;
+    border-bottom: 1px solid #b9b9b9;
+    padding-bottom: 10px;
 }
 
 #body .body_profile:active {
@@ -55,7 +56,6 @@ padding-bottom: 10px;
     bottom: 25px;
 
 }
-
 
 #body .id_message {
     /** 카톡 상단의 본인 상태메시지 */
@@ -196,7 +196,6 @@ padding-bottom: 10px;
 #body .profile_f_picture img {
     display: block;
     width: 105%;
-
 }
 
 #body .profile_f_detail_2 {
@@ -215,9 +214,8 @@ padding-bottom: 10px;
 }
 
 .content {
-    display: block;
+    height: auto;          /* ★ 핵심: 고정 높이 제거 */
     margin-top: 3px;
-    height: 60px;
 }
 
 .kakaoicon {
@@ -225,24 +223,39 @@ padding-bottom: 10px;
     margin-bottom: 4px;
 }
 
-/* 1) float 격리: 각 블록이 스스로 플로우를 새로 시작하도록 */
-#body .body_profile,
+/* 0) float 전면 해제 */
+#body .body_menulist,
+#body .body_f_profile,
+#body ul {
+  float: none;           /* ★ 핵심: float 해제 */
+  width: auto;           /* 고정폭(330px)도 해제 권장 */
+}
+
+/* 1) 섹션 단위로 BFC 생성 (부모가 자기 높이를 갖도록) */
 #body .body_menulist,
 #body .body_f_profile {
-  display: flow-root; /* clearfix 대체: 부모가 float 높이를 포함 */
+  display: flow-root;    /* 또는 overflow: hidden; */
 }
 
 /* 2) 친구행 시작 시, 위 플로트 영향 안 받도록 */
 #body .body_f_profile { clear: both; }
 
-/* 3) Footer가 fixed라서 내용이 가려지지 않도록 하단 패딩 확보 */
+/* 3) 채널 요약 줄은 float 대신 flex로 정렬 (안정적인 아이콘/텍스트 배치) */
+#body .body_menulist .channel-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 4) Footer가 fixed라서 내용이 가려지지 않도록 하단 패딩 확보 */
 #body { padding-bottom: 80px; } /* 기존보다 조금 여유 있게 */
 
-/* 4) 친구행 텍스트 여백을 '상단 프로필' 스타일과 분리해서 스코프 지정 */
+/* 5) 친구행 텍스트 여백을 '상단 프로필' 스타일과 분리해서 스코프 지정 */
 #body .body_f_profile .id_name {
   margin: 6px 0 0 10px;  /* 상단 프로필용 큰 마진을 덮어쓰기 */
   font-size: 13px;
 }
+
 #body .body_f_profile .id_message {
   margin: 2px 0 0 10px;
   font-size: 11px;
