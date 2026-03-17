@@ -28,7 +28,7 @@ export default function App() {
 
       {/* 내용영역: 라우팅으로 분리 */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/friends" replace />} />
         <Route path="/chats" element={<ChatList />} />
         <Route path="/chat/:chatId" element={<ChatRoom />} />
         <Route path="*" element={<Navigate to="/" replace />} />
