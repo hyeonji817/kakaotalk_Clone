@@ -34,7 +34,7 @@ export default function MenuSection({ title, iconSrc, description, items }) {
               className="profile_f_detail_1"
               key={item.id}
               onClick={(e) => e.preventDefault()}
-              style={{ display: "flex", gap: 8, alignItems: "center", padding: "8px 0" }}
+              style={{ display: "flex", gap: 8, alignItems: "center", padding: "8px 0", position: "relative", left: "8px" }}
            >
             <img className="profile_f_picture" src={item.img} alt={item.alt} />
             <div>
