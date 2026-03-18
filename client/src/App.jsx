@@ -13,8 +13,11 @@ import ChatRoom from "./pages/ChatRoom.jsx";
 
 function useHeaderTitle() {
   const { pathname } = useLocation();
+  
   if (pathname.startsWith("/chat/")) return "채팅방";
   if (pathname.startsWith("/chats")) return "채팅";
+  if (pathname.startsWith("/friends")) return "친구";
+
   return "친구";
 }
 
@@ -29,6 +32,7 @@ export default function App() {
       {/* 내용영역: 라우팅으로 분리 */}
       <Routes>
         <Route path="/" element={<Navigate to="/friends" replace />} />
+        <Route path="/friends" element={<Home />} />
         <Route path="/chats" element={<ChatList />} />
         <Route path="/chat/:chatId" element={<ChatRoom />} />
         <Route path="*" element={<Navigate to="/" replace />} />
